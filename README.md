@@ -15,6 +15,16 @@
 
 - Valary Thairu
 
+1. [BUSINESS UNDERSTANDING](#business-understanding)
+2. [DATA UNDERSTANDING](#data-understanding)
+3. [DATA PREPARATION](#data-preparation)
+4. [EXPLORATORY DATA ANALYSIS](#exploratory-data-analysis)
+5. [MODELLING](#modelling)
+6. [FORECASTING](#forecasting)
+7. [DEPLOYMENT](#deployment)
+8. [CONCLUSIONS](#conclusions)
+9. [RECOMMENDATIONS](#recommendations)
+
 
 # 1.Business Understanding
 ## 1.1. Problem Statement
