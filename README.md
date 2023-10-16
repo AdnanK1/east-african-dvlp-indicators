@@ -134,14 +134,17 @@ The RMSE values are stored in train_dict and test_dict dictionaries, respectivel
 
 
 ## 5.2.AR Model
+-  In this section, we implemented Autoregressive models which are a class of statistical models. Used to analyze and predict time series data, where observations are dependent on past observations.The choice of the order "p" and the estimation of coefficients are critical steps in using AR models for forecasting and understanding time-dependent data.
+  
 
 
 ## 5.3. Simple Exponential Smoothing (SES) Model
-
+- Simple Exponential Smoothing (SES) is a time series forecasting method used to make short-term predictions for data with no significant trend or seasonality. It's a basic but effective technique, particularly when dealing with data that exhibits random fluctuations over time. 
 
 
 
 ## 5.4.LSTM
+-It is a type of recurrent neural network (RNN) that is well-suited for processing sequential data such as time series. LSTM networks have an internal memory state that allows them to remember information over long periods of time and selectively forget irrelevant information, making them particularly useful for modeling complex temporal relationships in data.
 
 
 
