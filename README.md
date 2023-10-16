@@ -15,18 +15,18 @@
 
 - Valary Thairu
 
+The README consists of the following content:
 1. [BUSINESS UNDERSTANDING](#business-understanding)
 2. [DATA UNDERSTANDING](#data-understanding)
 3. [DATA PREPARATION](#data-preparation)
 4. [EXPLORATORY DATA ANALYSIS](#exploratory-data-analysis)
-5. [MODELLING](#modelling)
+5. [MODELING](#modeling)
 6. [FORECASTING](#forecasting)
 7. [DEPLOYMENT](#deployment)
 8. [CONCLUSIONS](#conclusions)
 9. [RECOMMENDATIONS](#recommendations)
 
-
-# 1.Business Understanding
+# Business Understanding
 ## 1.1. Problem Statement
 We aim to create a predictive model to forecast percentage changes in future healthcare expenditure trends in Eastern Africa, using historical data on healthcare financing and expenditure.
 
@@ -50,7 +50,7 @@ To analyze healthcare financing and expenditure trends in Eastern Africa to cons
 - To achieve a low root mean square error (RMSE) to ensure accurate forecasting.
 
 
-# 2. Data Understanding
+# Data Understanding
 ### 2.1. Data Source
 - The dataset is sourced from the World Bank's World Development Indicators (WDI) platform, which provides comprehensive development data covering various topics.
 
@@ -68,7 +68,7 @@ The data is structured and tabulated, providing a clear representation of variou
 
 
 
-# 3. Data Preparation
+# Data Preparation
 ### 3.1  Data Loading and Initial Examination
 The main dataset, WDIData.csv, was loaded into a DataFrame named wdi_df. The WDISeries.csv file, potentially providing metadata about the main dataset, was also loaded into a DataFrame called series_df. Upon an initial examination, it was observed that there was a column named 'Unnamed: 67', which seemed extraneous. This column was dropped to tidy up the data.
 
@@ -81,7 +81,7 @@ Our focus is on Eastern African countries, so the data was further filtered to i
 
 
 
-# 4. Exploratory Data Analysis(EDA)
+# Exploratory Data Analysis
 ### 4.1 Targeting Healthcare Expenditure Data
 Given the core concern around healthcare financing in Eastern Africa, the data was further refined to zero in on indicators related to healthcare expenditure. A list comprehension was employed to select those indicators containing the term 'expenditure'.
 
@@ -109,7 +109,7 @@ create_country_dfs: This function further divides the data frames obtained from 
 The resulting plots furnish insights into how each indicator has evolved over the years for all Eastern African countries under consideration.
 
 
-# 5. Modeling
+# Modeling
 ## 5.1. PREREQUISITES FOR MODELING
 ## Stationarity Testing 
 -The augmented Dickey-Fuller (ADF) test is a well-regarded technique to determine the stationarity of a time series dataset. Stationarity is a fundamental property for many time series models, and understanding whether data is stationary can guide model selection and further data preparation steps. We created an adf_test_indicator function that does the following:
@@ -145,16 +145,16 @@ The RMSE values are stored in train_dict and test_dict dictionaries, respectivel
 
 
 
-# 6. Forecasting
+#  Forecasting
 - At this point, we aimed to forecast future values for each time series in the dataset using the best model selected for each series to fit the model. We fitted the models and forecasted the future values for the next 12 months.
 
 
-# 7.Deployment
+# Deployment
 
 
-# 8. Conclusions
+# Conclusions
 
-# 9.Recommendations
+# Recommendations
 
 
 
