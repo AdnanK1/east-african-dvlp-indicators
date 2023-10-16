@@ -1,4 +1,7 @@
 # EASTERN AFRICA DEVELOPMENT INDICATORS
+
+<img src="https://i.pinimg.com/564x/47/8b/dc/478bdc1de418ac0242d54eb00ece77fc.jpg" alt="FORECAST" width="950" height="400">
+
 ## GROUP MEMBERS
 - Adnan Gitonga
 
@@ -12,8 +15,6 @@
 
 - Valary Thairu
 
-
-<img src="https://i.pinimg.com/564x/47/8b/dc/478bdc1de418ac0242d54eb00ece77fc.jpg" alt="FORECAST" width="950" height="400">
 
 # 1.Business Understanding
 ## 1.1. Problem Statement
@@ -88,12 +89,12 @@ Seven critical healthcare financing indicators were identified for deeper analys
 To facilitate time series analysis, the 'Years' column was converted into a datetime type and set as the dataframe's index.
 
 ### 4.6 Data Segmentation
-To simplify and optimize our analysis, we created two functions:
+-To simplify and optimize our analysis, we created two functions:
 create_dfs: This function segregates the main dataframe based on unique indicators. The outcome is a dictionary where each key is an indicator, and the corresponding value is a dataframe containing data solely for that indicator.
 create_country_dfs: This function further divides the data frames obtained from the create_dfs function by country. This nested segmentation aids in conducting a country-specific analysis of each indicator. The Percentage Diff column was added to these country-specific data frames to capture the year-on-year percentage change in the given indicator.
 
 ### 4.7 Visualization
-Given the segmented data, we sought to visualize the trends for each indicator across different Eastern African countries. The plot function was designed to represent a country's data trend over time for a specific indicator. For each indicator of interest, it creates a figure with multiple subplots—each subplot corresponding to a different country.
+-Given the segmented data, we sought to visualize the trends for each indicator across different Eastern African countries. The plot function was designed to represent a country's data trend over time for a specific indicator. For each indicator of interest, it creates a figure with multiple subplots—each subplot corresponding to a different country.
 
 The resulting plots furnish insights into how each indicator has evolved over the years for all Eastern African countries under consideration.
 
@@ -102,15 +103,19 @@ The resulting plots furnish insights into how each indicator has evolved over th
 ## 5.1. PREREQUISITES FOR MODELING
 ## Stationarity Testing 
 -The augmented Dickey-Fuller (ADF) test is a well-regarded technique to determine the stationarity of a time series dataset. Stationarity is a fundamental property for many time series models, and understanding whether data is stationary can guide model selection and further data preparation steps. We created an adf_test_indicator function that does the following:
-Country Filtering: The function begins by isolating data for a specified country.
-Iterative Testing: For every unique indicator related to the country, it does the following:
+- Country Filtering: The function begins by isolating data for a specified country.
+- Iterative Testing: For every unique indicator related to the country, it does the following:
 Before applying the ADF test, the function checks if the variance of the time series data for the indicator is zero. This is a prudent step since a time series with constant values will obviously be stationary, and there's no need to apply the ADF test to such series.
-The ADF test is executed on the 'Percentage' data for that indicator.
+
+- The ADF test is executed on the 'Percentage' data for that indicator.
 The results from the ADF test, including the ADF statistic, the p-value, and the critical values, are stored in a dictionary. A dictionary containing ADF results for all indicators associated with the specified country is returned. In essence, this function provides a concise summary of the stationarity status of all indicators for a specified country.
-A code that effectively aggregates the stationarity testing across multiple countries was written . It outlines the list of countries in Eastern Africa for which you want to determine the stationarity of health indicators.For each country in the list, the adf_test_indicator function is called, which performs the Augmented Dickey-Fuller test for each health indicator within the country. The results are then stored in the results dictionary, where each key is a country and the associated value is a list of tuple pairs containing indicators and their ADF test results.For each indicator within a country, it checks the ADF test statistics against the critical value and the p-value to infer stationarity.It then prints whether the indicator is "Stationary" or "Not Stationary".
+
+- A code that effectively aggregates the stationarity testing across multiple countries was written . It outlines the list of countries in Eastern Africa for which you want to determine the stationarity of health indicators.For each country in the list, the adf_test_indicator function is called, which performs the Augmented Dickey-Fuller test for each health indicator within the country. The results are then stored in the results dictionary, where each key is a country and the associated value is a list of tuple pairs containing indicators and their ADF test results.
+
+- For each indicator within a country, it checks the ADF test statistics against the critical value and the p-value to infer stationarity.It then prints whether the indicator is "Stationary" or "Not Stationary".
 ## Splitting data 
-The data was differenced then split into a train and testing sets based on a given date (2018). This means data up to 2018 is used for training, and the data from 2018 onward is used for testing. 
-The split_data function is defined to split the health indicators data by country for both the testing and training sets using the helper function create_country_dfs.
+- The data was differenced then split into a train and testing sets based on a given date (2018). This means data up to 2018 is used for training, and the data from 2018 onward is used for testing. 
+- The split_data function is defined to split the health indicators data by country for both the testing and training sets using the helper function create_country_dfs.
 
 ### 5.2.ARIMA Model
 For each health indicator in the training data, an ARIMA model was fitted on the 'Percentage Difference' of that indicator. Forecasts are then made for both the training and testing data.
