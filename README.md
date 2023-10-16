@@ -104,9 +104,9 @@ create_dfs: This function segregates the main dataframe based on unique indicato
 create_country_dfs: This function further divides the data frames obtained from the create_dfs function by country. This nested segmentation aids in conducting a country-specific analysis of each indicator. The Percentage Diff column was added to these country-specific data frames to capture the year-on-year percentage change in the given indicator.
 
 ### 4.7 Visualization
--Given the segmented data, we sought to visualize the trends for each indicator across different Eastern African countries. The plot function was designed to represent a country's data trend over time for a specific indicator. For each indicator of interest, it creates a figure with multiple subplots—each subplot corresponding to a different country.
+- Given the segmented data, we sought to visualize the trends for each indicator across different Eastern African countries. The plot function was designed to represent a country's data trend over time for a specific indicator. For each indicator of interest, it creates a figure with multiple subplots—each subplot corresponding to a different country.
 
-The resulting plots furnish insights into how each indicator has evolved over the years for all Eastern African countries under consideration.
+- The resulting plots furnish insights into how each indicator has evolved over the years for all Eastern African countries under consideration.
 
 
 # Modeling
@@ -153,6 +153,7 @@ The RMSE values are stored in train_dict and test_dict dictionaries, respectivel
 
 
 # Deployment
+
 
 
 # Conclusions
