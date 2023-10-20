@@ -153,14 +153,33 @@ The RMSE values are stored in train_dict and test_dict dictionaries, respectivel
 
 
 # Deployment
-
+- We were able to build a model where given a country, indicator and a range of years it was able to predict that specific indicator for that range of years.
 
 
 # Conclusions
+- Healthcare Financing Landscape in Eastern Africa: The data indicates that Eastern African countries have diverse healthcare financing sources, including government expenditure, private expenditure, and external funding. Government spending, out-of-pocket expenses, and external aid all play significant roles in financing healthcare.
+
+- LSTM Model is the most suitable model: Given the objective of creating a predictive model, the LSTM model was well suited for modelling because for modelling the time-dependent and complex nature of data. Its capacity to capture temporal patterns, adapt to non-linear relationships and provide the most accurate predictions.
+
+- Key Trends, Challenges: Data reveals various trends and challenges. It suggests that reliance on out-of-pocket spending can be a financial burden for individuals. The high percentage of government funding for healthcare is positive, but countries should consider optimizing the allocation of these resources.
+
+- Government Allocation to Health Expenditure: Eastern African countries allocate a substantial percentage to healthcare. It is essential to ensure that this funding is used efficiently to provide accessible and high-quality healthcare services.
+
+- Out-of-Pocket Expenditure: Out-of-pocket expenditure accounts for a significant portion of healthcare financing. Reducing this reliance and implementing health insurance or other financial protection mechanisms could alleviate the financial burden on individuals.
+
 
 # Recommendations
+- Government Health Funding: Countries should continue to prioritize government funding for healthcare to ensure accessibility and affordability for their citizens. This can lead to improved healthcare outcomes and reduced financial barriers.
 
+- Private Sector Engagement: Countries with a high percentage of domestic private health expenditure should consider policies that encourage private sector investment while maintaining affordability and quality of care. Public-private partnerships can be explored.
 
+- Monitoring and enhancing external funding: countries should ccollaborate with international organizations and development partners to enhance healthcare financing. Exploring partnerships and aid can improve healthcare services and infrastructure in the region.
+
+- Reducing Out-of-Pocket Expenditure: High out-of-pocket expenditure can be a financial burden on individuals. Countries should consider health insurance or other mechanisms to reduce the direct financial impact on patients and improve financial protection.
+
+- Monitoring and Evaluation: Regular monitoring and evaluation of these indicators are essential to ensure that healthcare funding aligns with national health priorities and that resources are used efficiently and effectively.
+
+- Efficiency and Access: Focus on improving the efficiency of healthcare expenditure to ensure that resources are directed toward providing accessible and high-quality healthcare services to the population.
 
 
 
